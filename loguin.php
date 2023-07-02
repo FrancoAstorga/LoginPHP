@@ -20,32 +20,42 @@ if (isset($_GET['user_get']) && isset($_GET['pass_get'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
-<body>
+<body >
    <?php if ($user == 'root' && $password == '1234') { //administrador ?>
-        <h1>Bienvenido <?php echo  $_GET['nombre_get'].' '.$_GET['apellido_get']; ?> </h1>
-
-        <div class="card" style="width: 18rem;">
-            <img src="https://img-9gag-fun.9cache.com/photo/aVQ7Mjy_700bwp.webp" class="card-img-top" alt="img_admin">
-            <div class="card-body">
-                <h5 class="card-title">Administrador</h5>
-                <p class="card-text">Control total, ABM usuarios y modificar página.</p>
-                <a href="#" class="btn btn-primary">Panel de Control</a>
+  
+    <div class="container-fluid ">
+        <div class="row  mt-5">
+            <div class="col-6 mx-auto admin-view d-flex flex-column align-items-center justify-content-center">
+                <h1>Bienvenido <?php echo  $_GET['user_get']?> </h1>
+                <div class="card mb-4" style="width: 18rem;">
+                    <img src="https://img-9gag-fun.9cache.com/photo/aVQ7Mjy_700bwp.webp" class="card-img-top" alt="img_admin">
+                    <div class="card-body">
+                        <h5 class="card-title">Administrador</h5>
+                        <p class="card-text">Control total, ABM usuarios y modificar página.</p>
+                        <a href="#" class="btn btn-primary">Panel de Control</a>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
     <?php } else if ($user == 'frank' && $password == '777') {  //usuario existente?>
-
-        <h1>Bienvenido <?php echo  $_GET['nombre_get'].' '.$_GET['apellido_get']; ?> </h1>
-
-        <div class="card" style="width: 18rem;">
-            <img src="https://media.makeameme.org/created/end-users-g8ywwz.jpg" class="card-img-top" alt="img_user">
-            <div class="card-body">
-                <h5 class="card-title">User</h5>
-                <p class="card-text">Navegar por la página y funcionalidades básicas.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="container-fluid ">
+        <div class="row  mt-5">
+            <div class="col-6 mx-auto admin-view d-flex flex-column align-items-center justify-content-center">
+                <h1>Bienvenido <?php echo  $_GET['user_get']?> </h1>
+                <div class="card mb-4" style="width: 18rem;">
+                    <img src="https://media.makeameme.org/created/end-users-g8ywwz.jpg" class="card-img-top" alt="img_admin">
+                    <div class="card-body">
+                        <h5 class="card-title">user</h5>
+                        <p class="card-text">Navegar por la página y funcionalidades básicas.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
             </div>
         </div>
     <?php } else if ( isset($_GET['new_user_get']) && $_GET['new_user_get'] == "22") { //nuevo usuario ?>

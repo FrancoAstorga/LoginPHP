@@ -1,0 +1,47 @@
+html,body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+}
+
+#index-fondo{
+    background-color: red;
+}
+.loguin-fondo{
+    background-color: purple;
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.formulario{
+    background-color: orange;
+}
+
+.formulario h2{
+    text-align: center;
+}
+
+.red-asterisk {
+    color: red;
+}
+
+.index-button{
+    display: flex;
+    justify-content: center;
+    gap:25px;
+    margin-bottom: 10px;
+}
+
+
+.admin-view{
+    background-color:greenyellow;
+    text-align: center;
+}
+
+
+.container-fluid {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: purple;
+}
